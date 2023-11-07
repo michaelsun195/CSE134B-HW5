@@ -3,13 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>Michael Sun's Portfolio</title>
-    <link rel="next" href="projects.html">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Home</h1>
     </header>
     <main>
+        <nav aria-label="Main">
+            <table aria-label="Menu">
+                <tr>
+                    <th scope="col"><a href="index.html">Home</a></td>
+                    <th scope="col"><a href="projects.html">Projects</a></td>
+                    <th scope="col"><a href="experiments.html">Experiments</td>
+                </tr>
+            </table>
+        </nav>
+        <!---
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,18 +27,26 @@
                 <li><a href="experiments.html">Experiments</a></li>
             </ul>
         </nav>
-        <section>
-            <h2>Introduction</h2>
-            <p>Hello world</p>
-            <aside>
-                <p>More content will be added soon!</p>
-            </aside>
+        -->
+        <section id="intro">
+            <h2 id="intro-header" class="index-h2">Introduction</h2>
+            <article id="intro-content">
+                <p>
+                    Hello world
+                    <br>
+                    <aside>More content will be added soon!</aside>
+                </p>
+            </article>
         </section>
-        <section>
-            <h2>Current courses</h2>
-            <h3>CSE 134B</h3>
-            <h3>LIGN 167</h3>
-            <h3>HIEA 112</h3>
+        <section id="courses">
+            <h2 id="courses-header" class="index-h2">Relevant Courses</h2>
+            <h3 class="course-name">CSE 134B</h3>
+            <p>This course is about web design and development.</p>
+            <h3 class="course-name">CSE 150B</h3>
+            <h3 class="course-name">CSE 167</h3>
+            <h3 class="course-name">CSE 127</h3>
+            <h3 class="course-name">CSE 152A</h3>
+            <p><strong>More to be added later!</strong></p>
         </section>
     </main>
     <footer>

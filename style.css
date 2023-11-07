@@ -1,0 +1,167 @@
+:root {
+    --nav-border-color: transparent;
+    font-family: "Comic Sans", serif;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    & a {
+        color: black;
+    }
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+        border-color: var(--nav-border-color, transparent);
+    }
+    & th {
+        /* border: 1px solid black; */
+        height: 3em;
+        width: 33%;
+        background-color: gainsboro;
+        text-align: center;
+        border-color: var(--nav-border-color, transparent);
+        transition: background-color 0.5s ease;
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+    & td {
+        border-color: var(--nav-border-color, transparent);
+    }
+}
+
+td {
+    text-align: center;
+}
+
+h2 {
+    &#intro-header {
+        animation-duration: 3s;
+        animation-name: h2slide;
+        animation-fill-mode: forwards;
+        opacity: 0%;
+    }
+    &#courses-header {
+        animation-duration: 3s;
+        animation-name: h2slide;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        opacity: 0%;
+    }
+}
+
+section {
+    &#intro {
+        /* background: scroll no-repeat right url("assets/lake.png"); */
+        & *:not(h2) {
+            animation-duration: 3s;
+            animation-name: fadein;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            opacity: 0%;
+        }
+    }
+    &#courses {
+        & h3 {
+            animation-duration: 3s;
+            animation-name: h3slide;
+            animation-fill-mode: forwards;
+            animation-delay: 3.5s;
+            opacity: 0%;
+        }
+        & *:not(h2,h3) {
+            animation-duration: 3s;
+            animation-name: fadein;
+            animation-fill-mode: forwards;
+            animation-delay: 5.5s;
+            opacity: 0%;
+        }
+    }
+}
+
+svg#initials-svg {
+    animation-duration: 8s;
+    animation-name: svgroll;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h2slide {
+    from {
+        margin-left: 10%;
+        opacity: 0%;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 100%;
+    }
+}
+
+@keyframes h3slide {
+    from {
+        margin-left: 5%;
+        opacity: 0%;
+    }
+    to {
+        margin-left: 0%;
+        opacity: 100%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes svgroll {
+    from {
+        margin-left: 0%;
+        transform: rotate(0deg);
+    }
+    50% {
+        margin-left: 50%;
+        transform: rotate(360deg);
+    }
+    to {
+        margin-left: 0%;
+        transform: rotate(0deg);
+    }
+}
+
+@font-face {
+    font-family: "Comic Sans";
+    src: local("Comic Sans MS");
+}
+
+/*
+.index-h2 {
+    opacity: 0%;
+}
+
+h2.index-h2 {
+    animation-duration: 3s;
+    animation-name: basicslideup;
+    animation-fill-mode: forwards;
+}
+
+h2#courses-header {
+    animation-delay: 5s;
+}
+
+@keyframes basicslideup {
+    from {
+        margin-top: 10dvh;
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+*/

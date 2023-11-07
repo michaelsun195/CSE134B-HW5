@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Michael Sun's Portfolio</title>
-    <link rel="prev" href="index.html">
+    <link rel="stylesheet" href="style.css">
     <style>
         table,
         th,
@@ -17,12 +17,14 @@
         <h1>Experiments</h1>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experiments.html">Experiments</a></li>
-            </ul>
+        <nav aria-label="Main">
+            <table aria-label="Menu">
+                <tr>
+                    <th scope="col"><a href="index.html">Home</a></td>
+                    <th scope="col"><a href="projects.html">Projects</a></td>
+                    <th scope="col"><a href="experiments.html">Experiments</td>
+                </tr>
+            </table>
         </nav>
         <p>
             <b><i>Hello world</i></b> <br>
@@ -152,8 +154,8 @@
             }
         </script>
         <br>
-        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="black" />
+        <svg id="initials-svg" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="100" r="100" />
             <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">MS</text>
         </svg>
         <br>
