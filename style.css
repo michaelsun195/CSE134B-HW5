@@ -92,7 +92,7 @@ svg#initials-svg {
 }
 
 video, form {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 @keyframes h2slide {
@@ -147,20 +147,29 @@ video, form {
 }
 
 @media only screen and (min-width: 250px) and (max-width: 1000px) {
-    body {
+    :root {
         font-size: 5dvw;
     }
-    nav {
-        & table {
-            width: 100vw;
-        }
-        & tr {
-            display: block;
-            width: 300vw;
-        }
-        & th, td {
-            display: block;
-        }
+    textarea {
+        width: 95%;
+    }
+    button {
+        font-size: 5dvw;
+        padding: 0.35rem;
+        margin-top: 1rem;
+    }
+    nav th{
+        display: block;
+        width: 100%;
+    }
+    ol li {
+        margin-left: 10dvw;
+    }
+    audio {
+        width: 100%;
+    }
+    iframe, source, img, video {
+        max-width: 80%;
     }
 }
 /*
