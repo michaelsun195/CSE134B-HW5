@@ -194,7 +194,8 @@ https://github.blog/2022-12-02-introducing-mona-sans-and-hubot-sans/.
     nav th{
         display: block;
         width: 100%;
-        padding-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
     }
     ol li {
         margin-left: 10vw;
