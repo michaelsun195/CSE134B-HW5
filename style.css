@@ -142,7 +142,7 @@ svg#initials-svg {
 
 @media only screen and (min-width: 250px) and (max-width: 1000px) {
     body {
-        font-size: 1dvw;
+        font-size: 5dvw;
     }
     video, form {
         max-width: 50%;
