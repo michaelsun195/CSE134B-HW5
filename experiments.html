@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <title>Michael Sun's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="assets/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <style>
-        table,
-        th,
-        td {
+        table, th, td {
             border: 1px solid black
         }
     </style>
@@ -26,146 +25,148 @@
                 </tr>
             </table>
         </nav>
-        <p>
-            <b><i>Hello world</i></b> <br>
-            Below is a list of various sorting algorithms:
-        </p>
-        <ol>
-            <li><code>quicksort()</code></li>
-            <li><code>mergesort()</code></li>
-            <li><code>heapsort()</code></li>
-            <li><code>bubblesort()</code></li>
-        </ol>
-        <p>Out of these algorithms, <span class="algorithm">quicksort</span> and <span class="algorithm">mergesort</span> are my favorites.</p>
-        <table>
-            <caption>
-                Difficulty of courses I've taken
-            </caption>
-            <colgroup>
-                <col>
-                <col span="4" class="Difficulty">
-            </colgroup>
-            <tr>
-                <td></td>
-                <th scope="col">100</th>
-                <th scope="col">151A</th>
-                <th scope="col">120</th>
-                <th scope="col">167</th>
-            </tr>
-            <tr>
-                <th scope="row">Class</th>
-                <td>Easy</td>
-                <td>Medium</td>
-                <td>Hard</td>
-                <td>Hard</td>
-            </tr>
-        </table>
-        <br>
-        <details>
-            <summary><strong>Notes</strong></summary>
-            <em>This part of the website is for experimentation.</em>
-        </details>
-        <label for="language-choice">Select a language:</label>
-        <input list="languages" id="language-choice" name="language-choice">
-        <datalist id="languages">
-            <option value="English"></option>
-            <option value="Spanish"></option>
-        </datalist>
-        <br>
-        <label for="cuisine-choice">Select a favorite cuisine:</label>
-        <select name="cuisines" id="cuisine-choice">
-            <option value="">Choose a cuisine</option>
-            <option value="american">American</option>
-            <option value="italian">Italian</option>
-            <option value="japanese">Japanese</option>
-        </select>
-        <br>
-        <label for="food-choices">Choose a food:</label>
-        <select id="food-choices">
-            <optgroup label="Pizza">
-                <option>Pepperoni</option>
-                <option>Cheese</option>
-                <option>Veggie</option>
-            </optgroup>
-            <optgroup label="Ice Cream">
-                <option>Chocolate</option>
-                <option>Vanilla</option>
-                <option>Strawberry</option>
-            </optgroup>
-        </select>
-        <form>
-            <fieldset>
-                <legend>Choose a drink</legend>
-                <input type="radio" id="coke" name="drink" value="C">
-                <label for="coke">Coke</label><br>
-                <input type="radio" id="pepsi" name="drink" value="P">
-                <label for="pepsi">Pepsi</label>
-            </fieldset>
-        </form>
-        <hr>
-        <div>
+        <section>
             <p>
-                Einstein's most famous formula is
-                <math display="inline">
-                    <mi>E</mi>
-                    <mo>=</mo>
-                    <mi>m</mi>
-                    <msup>
-                        <mi>c</mi>
-                        <mn>2</mn>
-                    </msup>
-                </math>
-                .
+                <b><i>Hello world</i></b> <br>
+                Below is a list of various sorting algorithms:
             </p>
-        </div>
-        <hr>
-        <iframe src="https://example.com" title="example iframe" width="400" height="300"></iframe>
-        <br>
-        <picture>
-            <source srcset="assets/lake.png">
-            <img src="assets/lake.JPG" alt="Image of Crater Lake">
-        </picture>
-        <br>
-        <video controls src="assets/train.mp4"></video>
-        <br>
-        <figure>
-            <figcaption>Dog barks :D</figcaption>
-            <audio controls src="assets/dog.wav"></audio>
-        </figure>
-        <label for="comment">Leave a comment here!</label>
-        <br>
-        <textarea id="comment" name="comment" rows="5">
-            Write something...
-        </textarea>
-        <br>
-        <button>Submit</button>
-        <br>
-        (This button does nothing)
-        <br>
-        <template id="success-message">
-            <p>Comment submitted successfully!</p>
-        </template>
-        <canvas id="square" width="200" height="200"></canvas>
-        <script>
-            const canvas = document.getElementById("square");
-            if (canvas.getContext) {
-                const context = canvas.getContext("2d");
-                context.fillRect(0, 0, 200, 200);
-            }
-        </script>
-        <br>
-        <svg id="initials-svg" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="150" cy="100" r="100" />
-            <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">MS</text>
-        </svg>
-        <br>
-        <pre>
-            V V V V V
-             V V V V
-              V V V
-               V V
-                V
-        </pre>
+            <ol>
+                <li><code>quicksort()</code></li>
+                <li><code>mergesort()</code></li>
+                <li><code>heapsort()</code></li>
+                <li><code>bubblesort()</code></li>
+            </ol>
+            <p>Out of these algorithms, <span class="algorithm">quicksort</span> and <span class="algorithm">mergesort</span> are my favorites.</p>
+            <table>
+                <caption>
+                    Difficulty of courses I've taken
+                </caption>
+                <colgroup>
+                    <col>
+                    <col span="4" class="Difficulty">
+                </colgroup>
+                <tr>
+                    <td></td>
+                    <th scope="col">100</th>
+                    <th scope="col">151A</th>
+                    <th scope="col">120</th>
+                    <th scope="col">167</th>
+                </tr>
+                <tr>
+                    <th scope="row">Class</th>
+                    <td>Easy</td>
+                    <td>Medium</td>
+                    <td>Hard</td>
+                    <td>Hard</td>
+                </tr>
+            </table>
+            <br>
+            <details>
+                <summary><strong>Notes</strong></summary>
+                <em>This part of the website is for experimentation.</em>
+            </details>
+            <label for="language-choice">Select a language:</label>
+            <input list="languages" id="language-choice" name="language-choice">
+            <datalist id="languages">
+                <option value="English"></option>
+                <option value="Spanish"></option>
+            </datalist>
+            <br>
+            <label for="cuisine-choice">Select a favorite cuisine:</label>
+            <select name="cuisines" id="cuisine-choice">
+                <option value="">Choose a cuisine</option>
+                <option value="american">American</option>
+                <option value="italian">Italian</option>
+                <option value="japanese">Japanese</option>
+            </select>
+            <br>
+            <label for="food-choices">Choose a food:</label>
+            <select id="food-choices">
+                <optgroup label="Pizza">
+                    <option>Pepperoni</option>
+                    <option>Cheese</option>
+                    <option>Veggie</option>
+                </optgroup>
+                <optgroup label="Ice Cream">
+                    <option>Chocolate</option>
+                    <option>Vanilla</option>
+                    <option>Strawberry</option>
+                </optgroup>
+            </select>
+            <form>
+                <fieldset>
+                    <legend>Choose a drink</legend>
+                    <input type="radio" id="coke" name="drink" value="C">
+                    <label for="coke">Coke</label><br>
+                    <input type="radio" id="pepsi" name="drink" value="P">
+                    <label for="pepsi">Pepsi</label>
+                </fieldset>
+            </form>
+            <hr>
+            <div>
+                <p>
+                    Einstein's most famous formula is
+                    <math display="inline">
+                        <mi>E</mi>
+                        <mo>=</mo>
+                        <mi>m</mi>
+                        <msup>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                    .
+                </p>
+            </div>
+            <hr>
+            <iframe src="https://example.com" title="example iframe" width="400" height="300"></iframe>
+            <br>
+            <picture>
+                <source srcset="assets/lake.png">
+                <img src="assets/lake.JPG" alt="Image of Crater Lake">
+            </picture>
+            <br>
+            <video controls src="assets/train.mp4"></video>
+            <br>
+            <figure>
+                <figcaption>Dog barks :D</figcaption>
+                <audio controls src="assets/dog.wav"></audio>
+            </figure>
+            <label for="comment">Leave a comment here!</label>
+            <br>
+            <textarea id="comment" name="comment" rows="5">
+                Write something...
+            </textarea>
+            <br>
+            <button>Submit</button>
+            <br>
+            (This button does nothing)
+            <br>
+            <template id="success-message">
+                <p>Comment submitted successfully!</p>
+            </template>
+            <canvas id="square" width="200" height="200"></canvas>
+            <script>
+                const canvas = document.getElementById("square");
+                if (canvas.getContext) {
+                    const context = canvas.getContext("2d");
+                    context.fillRect(0, 0, 200, 200);
+                }
+            </script>
+            <br>
+            <svg id="initials-svg" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="100" r="100" />
+                <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">MS</text>
+            </svg>
+            <br>
+            <pre>
+                V V V V V
+                V V V V
+                V V V
+                V V
+                    V
+            </pre>
+        </section>
     </main>
     <footer>
         <hr>

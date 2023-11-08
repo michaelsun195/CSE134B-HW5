@@ -1,13 +1,31 @@
 :root {
     --nav-border-color: transparent;
-    font-family: "Comic Sans", serif;
+    font-family: "Mona Sans", "Mona Sans Fallback", sans-serif;
     font-size: 1dvw;
     max-width: 100%;
     overflow-x: hidden;
 }
 
+body {
+    margin: 0px;
+}
+
+/* Background stock image source: https://stock.adobe.com/images/website-header-or-banner-design-with-hexagons-pattern-geometric-abstract-background-with-simple-hexagonal-elements-medical-technology-or-science-design/276080724*/
 header {
     text-align: center;
+    background-image: url("assets/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg");
+    background-size: cover;
+    color: white;
+    height: 5rem;
+    padding-top: 2rem;
+    & h1 {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+}
+
+footer {
+    margin: 1rem;
 }
 
 nav {
@@ -57,6 +75,7 @@ h2 {
 }
 
 section {
+    margin: 1rem;
     &#intro {
         /* background: scroll no-repeat right url("assets/lake.png"); */
         & *:not(h2) {
@@ -141,9 +160,23 @@ video, form {
     }
 }
 
+/*
+Credit to Github for the open source Mona Sans font, the repository with the font can be found at
+https://github.com/github/mona-sans. A guide to using the font can be found at
+https://github.blog/2022-12-02-introducing-mona-sans-and-hubot-sans/.
+*/
 @font-face {
-    font-family: "Comic Sans";
-    src: local("Comic Sans MS");
+    font-family: 'Mona Sans';
+    src:
+        url('assets/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('assets/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+@font-face {
+    font-family: 'Mona Sans Fallback';
+    src: local(Arial);
 }
 
 @media only screen and (min-width: 250px) and (max-width: 1000px) {
