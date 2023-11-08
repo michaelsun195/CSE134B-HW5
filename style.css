@@ -148,13 +148,13 @@ video, form {
 
 @media only screen and (min-width: 250px) and (max-width: 1000px) {
     :root {
-        font-size: 5dvw;
+        font-size: 5vw;
     }
     textarea {
         width: 95%;
     }
     button {
-        font-size: 5dvw;
+        font-size: 5vw;
         padding: 0.35rem;
         margin-top: 1rem;
     }
@@ -163,7 +163,7 @@ video, form {
         width: 100%;
     }
     ol li {
-        margin-left: 10dvw;
+        margin-left: 10vw;
     }
     audio {
         width: 100%;
