@@ -2,6 +2,8 @@
     --nav-border-color: transparent;
     font-family: "Comic Sans", serif;
     font-size: 1dvw;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -89,6 +91,10 @@ svg#initials-svg {
     animation-fill-mode: forwards;
 }
 
+video, form {
+    max-width: 50%;
+}
+
 @keyframes h2slide {
     from {
         margin-left: 10%;
@@ -144,12 +150,17 @@ svg#initials-svg {
     body {
         font-size: 5dvw;
     }
-    video, form {
-        max-width: 50%;
-    }
-    tr, th, td {
-        display: block;
-        width: 300%;
+    nav {
+        & table {
+            width: 100vw;
+        }
+        & tr {
+            display: block;
+            width: 300vw;
+        }
+        & th, td {
+            display: block;
+        }
     }
 }
 /*
