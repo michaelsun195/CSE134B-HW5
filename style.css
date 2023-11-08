@@ -1,6 +1,7 @@
 :root {
     --nav-border-color: transparent;
     font-family: "Comic Sans", serif;
+    font-size: 1dvw;
 }
 
 header {
@@ -139,6 +140,18 @@ svg#initials-svg {
     src: local("Comic Sans MS");
 }
 
+@media only screen and (min-width: 250px) and (max-width: 1000px) {
+    body {
+        font-size: 1dvw;
+    }
+    video, form {
+        max-width: 50%;
+    }
+    tr, th, td {
+        display: block;
+        width: 300%;
+    }
+}
 /*
 .index-h2 {
     opacity: 0%;
