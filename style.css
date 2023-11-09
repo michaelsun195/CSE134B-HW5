@@ -14,7 +14,7 @@ body {
 header {
     text-align: center;
     background-image: url("assets/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg");
-    background-color: darkcyan;
+    background-color: color-mix(in srgb, darkcyan, darkblue);
     background-size: cover;
     color: white;
     height: 5rem;
