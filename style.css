@@ -14,6 +14,7 @@ body {
 header {
     text-align: center;
     background-image: url("assets/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg");
+    background-color: darkcyan;
     background-size: cover;
     color: white;
     height: 5rem;
@@ -31,6 +32,7 @@ footer {
 nav {
     & a {
         color: black;
+        text-decoration-line: none;
     }
     & table {
         width: 100%;
@@ -77,7 +79,7 @@ h2 {
 section {
     margin: 1rem;
     &#intro {
-        /* background: scroll no-repeat right url("assets/lake.png"); */
+        max-width: 50%;
         & *:not(h2) {
             animation-duration: 3s;
             animation-name: fadein;
@@ -87,6 +89,7 @@ section {
         }
     }
     &#courses {
+        max-width: 50%;
         & h3 {
             animation-duration: 3s;
             animation-name: h3slide;
@@ -205,6 +208,14 @@ https://github.blog/2022-12-02-introducing-mona-sans-and-hubot-sans/.
     }
     iframe, source, img, video {
         max-width: 80%;
+    }
+    section {
+        &#intro {
+            max-width: 100%;
+        }
+        &#courses {
+            max-width: 100%;
+        }
     }
 }
 /*
