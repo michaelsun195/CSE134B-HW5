@@ -81,6 +81,11 @@ h2 {
     }
     &#contact-header {
         margin-bottom: 0.5rem;
+        animation-duration: 3s;
+        animation-name: h2slide;
+        animation-fill-mode: forwards;
+        animation-delay: 7s;
+        opacity: 0%;
     }
 }
 
@@ -113,6 +118,16 @@ section {
             opacity: 0%;
         }
     }
+    &#contact-form-section {
+        max-width: 50%;
+        & *:not(h2) {
+            animation-duration: 3s;
+            animation-name: fadein;
+            animation-fill-mode: forwards;
+            animation-delay: 7.8s;
+            opacity: 0%;
+        }
+    }
 }
 
 svg#initials-svg {
@@ -128,8 +143,8 @@ video {
 form {
     max-width: 100%;
     &#contact-form {
-        & input {
-            margin-bottom: 0.3rem;
+        & label#email-label, label#comments-label {
+            margin-top: 0.5rem;
         }
         & label {
             display: block;
@@ -168,6 +183,15 @@ label.theme-toggle {
         background-color: white;
         transition: 0.3s;
     }
+}
+
+span.required-symbol {
+    color: #c80815;
+}
+
+output, p#required-field-info {
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
 @keyframes h2slide {

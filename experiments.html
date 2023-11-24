@@ -10,8 +10,42 @@
             border: 1px solid black
         }
     </style>
+    <noscript>
+        <style>
+            .theme-toggle {
+                visibility: hidden;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            const currTheme = localStorage.getItem("currTheme");
+            if (currTheme === "light") {
+                document.body.style.backgroundColor = "rgb(237, 241, 245)";
+                document.body.style.color = "black";
+                let textInputs = document.querySelectorAll(":is(input[type='text'], input[type='email'], textarea, button)");
+                for (let input of textInputs) {
+                    input.style.backgroundColor = "white";
+                    input.style.color = "black";
+                }
+                localStorage.setItem("currTheme", "light");
+            }
+            else {
+                document.getElementById("theme-label").click();
+                window.scrollTo(0,0);
+                document.body.style.backgroundColor = "rgb(21, 31, 46)";
+                document.body.style.color = "white";
+                let textInputs = document.querySelectorAll(":is(input[type='text'], input[type='email'], textarea, button)");
+                for (let input of textInputs) {
+                    input.style.backgroundColor = "rgb(11, 22, 34)";
+                    input.style.color = "white";
+                }
+                localStorage.setItem("currTheme", "dark");
+            }
+        };
+    </script>
     <header>
         <h1>Experiments</h1>
     </header>
@@ -157,6 +191,9 @@
     <footer>
         <hr>
 		<p>This page was made by Michael Sun</p>
+        <script src="darktheme.js"></script>
+        <input type="checkbox" class="theme-toggle" id="theme-switch">
+        <label class="theme-toggle" id="theme-label" for="theme-switch" onclick="darkMode()"></label>
     </footer>
 </body>
 
