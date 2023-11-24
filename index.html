@@ -5,8 +5,41 @@
     <title>Michael Sun's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preload" href="assets/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript>
+        <style>
+            .theme-toggle {
+                visibility: hidden;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            const currTheme = localStorage.getItem("currTheme");
+            if (currTheme === "light") {
+                document.body.style.backgroundColor = "rgb(237, 241, 245)";
+                document.body.style.color = "black";
+                let textInputs = document.querySelectorAll(":is(input[type='text'], input[type='email'], textarea, button)");
+                for (let input of textInputs) {
+                    input.style.backgroundColor = "white";
+                    input.style.color = "black";
+                }
+                localStorage.setItem("currTheme", "light");
+            }
+            else {
+                document.getElementById("theme-label").click();
+                document.body.style.backgroundColor = "rgb(21, 31, 46)";
+                document.body.style.color = "white";
+                let textInputs = document.querySelectorAll(":is(input[type='text'], input[type='email'], textarea, button)");
+                for (let input of textInputs) {
+                    input.style.backgroundColor = "rgb(11, 22, 34)";
+                    input.style.color = "white";
+                }
+                localStorage.setItem("currTheme", "dark");
+            }
+        };
+    </script>
     <header>
         <h1>Home</h1>
     </header>
@@ -55,10 +88,28 @@
             <h3 class="course-name">CSE 152A</h3>
             <p><strong>More to be added later!</strong></p>
         </section>
+        <section>
+            <h2 id="contact-header">Contact Me!</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="5" cols="50" required>Write something...</textarea>
+                <br>
+                <button id="submit-button">Submit</button>
+                <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+            </form>
+        </section>
     </main>
     <footer>
         <hr>
 		<p>This page was made by Michael Sun</p>
+        <!---<p>&#9728;</p>-->
+        <script src="darktheme.js"></script>
+        <input type="checkbox" class="theme-toggle" id="theme-switch">
+        <label class="theme-toggle" id="theme-label" for="theme-switch" onclick="darkMode()"></label>
     </footer>
 </body>
 
