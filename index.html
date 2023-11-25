@@ -90,6 +90,7 @@
             <p><strong>More to be added later!</strong></p>
         </section>
         <section id="contact-form-section">
+            <script src="darktheme.js"></script>
             <h2 id="contact-header">Contact Me!</h2>
             <form id="contact-form" action="https://httpbin.org/post" method="post">
                 <label for="name">Name: <span class="required-symbol">*</span></label>
@@ -104,13 +105,15 @@
                 <br>
                 <output name="email-error" id="email-error" for="email"></output>
                 <label id="comments-label" for="comments">Comments: <span class="required-symbol">*</span></label>
-                <textarea id="comments" name="comments" rows="5" cols="50" maxlength="1000" oninvalid="document.getElementById('comments-error').textContent='Please write some comments.'" required>Write something...</textarea>
+                <textarea id="comments" name="comments" rows="5" cols="50" maxlength="1000" oninvalid="document.getElementById('comments-error').textContent='Please write some comments.'" required></textarea>
                 <br>
                 <output name="comments-info" id="comments-info" for="comments"></output>
+                <br>
                 <output name="comments-error" id="comments-error" for="comments"></output>
                 <br>
                 <button id="submit-button">Submit</button>
                 <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+                <input type="hidden" name="form-errors" id="form-errors" value="[]">
                 <p id="required-field-info"><span class="required-symbol">*</span> indicates a required field.</p>
             </form>
         </section>

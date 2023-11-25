@@ -189,9 +189,30 @@ span.required-symbol {
     color: #c80815;
 }
 
-output, p#required-field-info {
+output {
     font-style: italic;
     font-size: 0.8rem;
+    transition: color 0.5s ease 2s;
+    color: black;
+}
+
+p#required-field-info {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+button#submit-button {
+    margin-top: 0.5rem;
+}
+
+.form-error {
+    color: transparent;
+}
+
+@starting-style {
+    .form-error {
+        color: black;
+    }
 }
 
 @keyframes h2slide {
