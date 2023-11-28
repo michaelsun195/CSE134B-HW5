@@ -92,7 +92,7 @@
         <section id="contact-form-section">
             <script src="darktheme.js"></script>
             <h2 id="contact-header">Contact Me!</h2>
-            <form id="contact-form" action="https://httpbin.org/post" method="post">
+            <form id="contact-form" name="contact-form" action="https://httpbin.org/post" method="post">
                 <label for="name">Name: <span class="required-symbol">*</span></label>
                 <input type="text" name="name" id="name" oninvalid="document.getElementById('name-error').textContent='Please submit a valid name.'" required>
                 <br>
@@ -113,7 +113,7 @@
                 <br>
                 <button id="submit-button">Submit</button>
                 <input type="hidden" name="possible_bot" id="possible_bot" value="true">
-                <input type="hidden" name="form-errors" id="form-errors" value="[]">
+                <input type="hidden" name="form-errors" id="form-errors" value="{}">
                 <p id="required-field-info"><span class="required-symbol">*</span> indicates a required field.</p>
             </form>
         </section>
