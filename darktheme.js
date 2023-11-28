@@ -139,8 +139,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validName) {
             nameError.innerHTML = "Please enter a valid name.";
             nameError.classList.add("form-error");
+            nameField.style.backgroundColor = "rgb(255, 179, 178)";
         }
-        else nameError.innerHTML = "";
+        else {
+            nameError.innerHTML = "";
+            nameField.style.backgroundColor = "white";
+        }
     });
     emailField.addEventListener("input", function (e) {
         emailError.classList.remove("form-error");
@@ -148,7 +152,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validEmail) {
             emailError.innerHTML = "Please enter a valid email.";
             emailError.classList.add("form-error");
+            emailField.style.backgroundColor = "rgb(255, 179, 178)";
         }
-        else emailError.innerHTML = "";
+        else {
+            emailError.innerHTML = "";
+            emailField.style.backgroundColor = "white";
+        }
     });
 });

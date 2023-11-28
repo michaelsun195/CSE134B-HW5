@@ -120,11 +120,17 @@
     </main>
     <footer>
         <hr>
-		<p>This page was made by Michael Sun</p>
-        <!---<p>&#9728;</p>-->
-        <script src="darktheme.js"></script>
-        <input type="checkbox" class="theme-toggle" id="theme-switch">
-        <label class="theme-toggle" id="theme-label" for="theme-switch" onclick="darkMode()"></label>
+        <p>Toggle light theme/dark theme!</p>
+        <div id="theme-container">
+            <div id="sun-symbol" class="mode-symbol">&#127774;</div>
+            <script src="darktheme.js"></script>
+            <div>
+                <input type="checkbox" class="theme-toggle" id="theme-switch">
+                <label class="theme-toggle" id="theme-label" for="theme-switch" onclick="darkMode()"></label>
+            </div>
+            <div class="mode-symbol">&#127769;</div>
+        </div>
+        <p>This page was made by Michael Sun</p>
     </footer>
 </body>
 
