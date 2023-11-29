@@ -7,8 +7,14 @@
     <link rel="preload" href="assets/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <noscript>
         <style>
-            .theme-toggle {
-                visibility: hidden;
+            #theme-container, #theme-label-js {
+                display: none;
+                & * {
+                    display: none;
+                }
+            }
+            p#theme-label-nojs {
+                display: block;
             }
         </style>
     </noscript>
@@ -120,7 +126,8 @@
     </main>
     <footer>
         <hr>
-        <p>Toggle light theme/dark theme!</p>
+        <p id="theme-label-js">Toggle light theme/dark theme!</p>
+        <p id="theme-label-nojs">Enable Javascript for theme toggle.</p>
         <div id="theme-container">
             <div id="sun-symbol" class="mode-symbol">&#127774;</div>
             <script src="darktheme.js"></script>

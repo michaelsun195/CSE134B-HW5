@@ -211,9 +211,14 @@ output {
     color: black;
 }
 
-p#required-field-info {
-    font-style: italic;
-    font-size: 0.8rem;
+p {
+    &#required-field-info {
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+    &#theme-label-nojs {
+        display: none;
+    }
 }
 
 button#submit-button {
