@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Web Components Demo</title>
+    <link rel="stylesheet" href="wcstyle.css">
+    <noscript>
+        <style>
+            form {
+                &.nojs {
+                    display: block;
+                }
+                &.withjs {
+                    display: none;
+                }
+            }
+        </style>
+    </noscript>
+</head>
+<body>
+    <header>
+        <h1>Web Components Demo</h1>
+    </header>
+    <main>
+        <script src="wcscript.js"></script>
+        <h2>Part 1 - Progressive Enhancement Rating Widget</h2>
+        <rating-widget>
+            <form class="nojs" action="https://httpbin.org/post" method="POST">
+                <label for="rating">How satisfied are you?</label>
+                <input type="hidden" name="question" value="How satisfied are you?">
+                <input type="hidden" name="sentBy" value="HTML">
+                <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+                <button type="submit">Submit</button>
+            </form>
+            <form id="rating-js" class="withjs" action="https://httpbin.org/post" method="POST">
+                <label for="star-rating">How satisfied are you?</label>
+                <input type="hidden" name="question" value="How satisfied are you?">
+                <input type="hidden" name="sentBy" value="JS">
+                <input type="number" id="rating-field" name="rating" min="1" max="5" value="0" required>
+                <p id="star-rating">
+                    <span id="1-empty">&#9733;</span><span id="2-empty">&#9733;</span><span id="3-empty">&#9733;</span><span id="4-empty">&#9733;</span><span id="5-empty">&#9733;</span>
+                </p>
+                <p id="rating-message"></p>
+            </form>
+        </rating-widget>
+        <h2>Part 2 - Graceful Degradation Web Component</h2>
+        <h3>Current Weather</h3>
+        <p><span id="forecast"></span> <span id="temperature"></span>&deg;F</p>
+    </main>
+    <footer>
+        <hr>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+form {
+    &.nojs {
+        display: none;
+    }
+}
+
+#star-rating {
+    font-size: xxx-large;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: gray;
+    & span:hover {
+        cursor: pointer;
+    }
+}
+
+#rating-field {
+    visibility: hidden;
+}
