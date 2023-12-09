@@ -1,7 +1,5 @@
-form {
-    &.nojs {
-        display: none;
-    }
+.nojs {
+    display: none;
 }
 
 #star-rating {
