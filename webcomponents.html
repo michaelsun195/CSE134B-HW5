@@ -39,18 +39,39 @@
                     <span id="1-empty">&#9733;</span><span id="2-empty">&#9733;</span><span id="3-empty">&#9733;</span><span id="4-empty">&#9733;</span><span id="5-empty">&#9733;</span>
                 </p>
                 <p id="rating-message"></p>
-                <label for="color-selected">Customize the selected star color:</label>
-                <input type="color" id="color-selected" name="color-selected" value="#ffd700">
-                <br>
-                <label for="color-unselected">Customize the unselected star color:</label>
-                <input type="color" id="color-unselected" name="color-unselected" value="#808080">
+                <p>
+                    <label for="symbol-select">Choose a rating symbol:</label>
+                    <select id="symbol-select" name="symbol-select">
+                        <option value="star">Star</option>
+                        <option value="heart">Heart</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="color-selected">Customize the selected star color:</label>
+                    <input type="color" id="color-selected" name="color-selected" value="#ffd700">
+                </p>
+                <p>
+                    <label for="color-unselected">Customize the unselected star color:</label>
+                    <input type="color" id="color-unselected" name="color-unselected" value="#808080">
+                </p>
             </form>
         </rating-widget>
         <p id="rating-message"></p>
         <h2>Part 2 - Graceful Degradation Web Component</h2>
         <h3>Current Weather</h3>
         <weather-widget>
-            <p class="withjs"><span id="forecast"></span> <span id="temperature"></span>&deg;F</p>
+            <div class="withjs" id="forecast-block">
+                <p class="withjs">Forecast: <span id="forecast"></span> <span id="temperature"></span>&deg;<span id="temp-units"></span></p>
+                <p class="withjs">Wind speed: <span id="wind-speed"></span> <span id="wind-dir"></span></p>
+                <p class="withjs">Humidity: <span id="humidity"></span>%</p>
+                <!--
+                    Weather icons taken from https://api.weather.gov/icons.
+                -->
+                <picture class="withjs">
+                    <source id="weather-icon" srcset="assets/unknown.png">
+                    <img src="assets/unknown.png" alt="Weather unknown">
+                </picture>
+            </div>
             <p class="nojs">Current Weather Conditions Unavailable</p>
         </weather-widget>
     </main>

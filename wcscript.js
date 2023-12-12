@@ -8,6 +8,42 @@ fetch(weatherRequest)
         let test = await new Response(response.body).json();
         document.getElementById("forecast").innerHTML = test["properties"]["periods"][0]["shortForecast"];
         document.getElementById("temperature").innerHTML = test["properties"]["periods"][0]["temperature"];
+        document.getElementById("temp-units").innerHTML = test["properties"]["periods"][0]["temperatureUnit"];
+        document.getElementById("wind-speed").innerHTML = test["properties"]["periods"][0]["windSpeed"];
+        document.getElementById("wind-dir").innerHTML = test["properties"]["periods"][0]["windDirection"];
+        document.getElementById("humidity").innerHTML = test["properties"]["periods"][0]["relativeHumidity"]["value"];
+        let currWeather = test["properties"]["periods"][0]["icon"].replace("https://api.weather.gov/icons/land/","").replace("?size=medium","");
+        let tags = currWeather.split("/");
+        switch (tags[1]) {
+            case "wind_skc":
+            case "wind_few":
+            case "wind_sct":
+            case "wind_bkn":
+            case "wind_ovc":
+                document.getElementById("weather-icon").setAttribute("srcset", "assets/" + tags[1].substring(5) + tags[0] + ".png");
+                break;
+            case "rain_snow":
+            case "rain_sleet":
+            case "snow_sleet":
+            case "rain_fzra":
+            case "snow_fzra":
+            case "rain_showers":
+            case "rain_showers_hi":
+            case "tsra_sct":
+            case "tsra_hi":
+                document.getElementById("weather-icon").setAttribute("srcset", "assets/" + tags[1].substring(0,4) + tags[0] + ".png");
+                break;
+            case "tropical_storm":
+            case "hurricane":
+            case "haze":
+            case "hot":
+            case "cold":
+                document.getElementById("weather-icon").setAttribute("srcset", "assets/" + tags[1] + ".png");
+                break;
+            default:
+                document.getElementById("weather-icon").setAttribute("srcset", "assets/" + tags[1] + tags[0] + ".png");
+        }
+        document.getElementById("forecast-block").style.display = "block";
     });
 
 function submitForm(currRating) {
@@ -38,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ratingMessage = document.getElementById("rating-message");
     const colorSelected = document.getElementById("color-selected");
     const colorUnselected = document.getElementById("color-unselected");
+    const symbolSelect = document.getElementById("symbol-select");
     let select1 = false;
     let select2 = false;
     let select3 = false;
@@ -46,6 +83,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let selectedColor = "gold";
     let unselectedColor = "gray";
 
+    symbolSelect.addEventListener("input", (event) => {
+        if (symbolSelect.value === "star") {
+            star1.innerHTML = "&#9733;";
+            star2.innerHTML = "&#9733;";
+            star3.innerHTML = "&#9733;";
+            star4.innerHTML = "&#9733;";
+            star5.innerHTML = "&#9733;";
+        }
+        else {
+            star1.innerHTML = "&#10084;";
+            star2.innerHTML = "&#10084;";
+            star3.innerHTML = "&#10084;";
+            star4.innerHTML = "&#10084;";
+            star5.innerHTML = "&#10084;";
+        }
+    }, false);
     colorSelected.addEventListener("input", (event) => {
         selectedColor = colorSelected.value;
     }, false);
